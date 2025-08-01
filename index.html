@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¿Quieres salir conmigo?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #ffe6f0;
+    }
+
+    h1 {
+      color: #ff3399;
+      font-size: 2.5em;
+    }
+
+    #botones {
+      margin-top: 40px;
+    }
+
+    button {
+      font-size: 1.5em;
+      padding: 10px 25px;
+      margin: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #si {
+      background-color: #66ff66;
+    }
+
+    #no {
+      background-color: #ff6666;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>¿Quieres salir conmigo?</h1>
+  <div id="botones">
+    <button id="si" onclick="alert('¡Sabía que dirías que sí! 💖')">Sí</button>
+    <button id="no">No</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById('no');
+
+    noBtn.addEventListener('mouseover', () => {
+      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
+    });
+  </script>
+
+</body>
+</html>
